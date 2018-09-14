@@ -7,3 +7,12 @@ spring:
         enabled: true
         service-id: CONFIG
       profile: dev
+  rabbitmq:
+      host: 10.253.192.17
+      port: 5672
+      username: guest
+      password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
