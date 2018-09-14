@@ -7,15 +7,15 @@ import lombok.Getter;
 public enum ProductStatusEnum {
 
 
-    UP(0,"在架"),DOWN(1,"下架");
+    UP(0, "在架"), DOWN(1, "下架");
 
     /**
-    状态码
+     * 状态码
      **/
     private Integer code;
     /**
      * 描述
-      */
+     */
     private String message;
 
     ProductStatusEnum(Integer code, String message) {

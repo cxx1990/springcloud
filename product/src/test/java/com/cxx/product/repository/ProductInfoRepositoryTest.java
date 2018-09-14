@@ -19,9 +19,9 @@ public class ProductInfoRepositoryTest {
 
 
     @Test
-    public void  findByProductStatus() throws Exception{
+    public void findByProductStatus() throws Exception {
         List<ProductInfo> list = productInfoRepository.findByProductStatus(0);
-        Assert.assertTrue(list.size()>0);
+        Assert.assertTrue(list.size() > 0);
     }
 
 }

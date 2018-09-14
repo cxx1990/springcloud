@@ -1,6 +1,8 @@
 package com.cxx.product.service;
 
 
+import com.cxx.common.DecreaseStockInput;
+import com.cxx.common.ProductInfoOutput;
 import com.cxx.product.dataobject.ProductInfo;
 
 import java.util.List;
@@ -18,14 +20,16 @@ public interface ProductService {
 
     /**
      * 查询商品列表
+     *
      * @param productIdList
      * @return
      */
-  //  List<ProductInfoOutput> findList(List<String> productIdList);
+    List<ProductInfo> findList(List<String> productIdList);
 
     /**
      * 扣库存
+     *
      * @param decreaseStockInputList
      */
-  //  void decreaseStock(List<DecreaseStockInput> decreaseStockInputList);
+    void decreaseStock(List<DecreaseStockInput> decreaseStockInputList);
 }

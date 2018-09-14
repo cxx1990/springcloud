@@ -9,12 +9,17 @@ import java.util.List;
 /**
  * @author cxx
  */
-public interface ProductInfoRepository extends JpaRepository<ProductInfo,String> {
+public interface ProductInfoRepository extends JpaRepository<ProductInfo, String> {
 
     /**
-     *
      * @param productStatus
      * @return
      */
     List<ProductInfo> findByProductStatus(Integer productStatus);
+
+    /**
+     * @param productLidtId
+     * @return
+     */
+    List<ProductInfo> findByProductIdIn(List<String> productLidtId);
 }
