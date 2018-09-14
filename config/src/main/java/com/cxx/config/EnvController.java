@@ -1,23 +1,22 @@
-package com.cxx.order.controller;
+package com.cxx.config;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-
 @RestController
-@RequestMapping("/env")
-@RefreshScope
 public class EnvController {
 
-    @Value("${env}")
-    private String env;
+   /* @Autowired
+    private LoadBalancerClient balancerClient;
 
-    @GetMapping("/print")
-    public String print() {
-        return env;
-    }
+    @PostMapping("/monitor")
+    public String monitor() {
+        ServiceInstance user = balancerClient.choose("CONFIG");
+        String url = String.format("http://%s:%s",user.getHost(),user.getPort()+"/actuator/bus-refresh");
+        return HttpClientUtil.post(url);
+    }*/
 }

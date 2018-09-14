@@ -5,13 +5,23 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/cxx1990/config-repo
+          uri: https://github.com/cxx1990/config-repo.git
           username: cxx1990317
           password: 15056040008cxx
           basedir: H:\springcloud\springcloud\config\basedir
+  rabbitmq:
+    host: 10.253.192.17
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
 server:
   port: 7081
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
